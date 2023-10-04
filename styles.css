@@ -1,0 +1,150 @@
+body, h1,h2, p {
+    color: #444452;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: Apercu,"Source Sans Pro",system,system-ui,-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+}
+
+h2 {
+    font-size: 1rem;
+    color: #007bff;   
+}
+
+::selection {
+    background: #FFDC00;
+}
+
+.title {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 200px;
+    margin-right: 70px;
+    color: #007bff;
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Intro section styles */
+#intro {
+    padding: 120px 100px;
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 1240px;
+    margin: 0 auto;
+    background-color: white;
+    
+}
+
+.tagline {
+    color: #444452;
+    font-size: 2.5rem;
+    max-width: 700px;
+    font-weight: 300;
+}
+.name {
+    font-weight: 700;
+}
+.contact {
+    font-size: 1.25rem;
+    font-weight: 400;
+
+}
+
+#intro h1 {
+    font-weight: 300;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+#intro .emoji img{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
+
+/* Hand wave animation */
+@keyframes waving-animation {
+    0%, 100% {
+        transform: rotate(0deg);
+        transform-origin: bottom right;
+    }
+    50% {
+        transform: rotate(25deg)  translateX(4px);
+        transform-origin: bottom right;
+    }
+}
+
+#intro .emoji:hover img {
+    animation: waving-animation .4s 2;
+}
+#intro .emoji img::selection {
+    background: transparent;
+}
+
+#intro .technologist img{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
+#intro .technologist img::selection {
+    background: transparent;
+}
+
+#intro .point img{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+}
+#intro .point img::selection {
+    background: transparent;
+}
+
+.email-link {
+    color: black;
+    text-decoration: none;
+    border-bottom: 2px solid #007BFF;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.email-link:hover {
+    color: white;
+    background-color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Footer section styles */
+footer {
+    color: black;
+    padding: 50px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.footer-left {
+    margin-left: 20px;
+}
+
+.footer-right {
+    margin-right: 20px;
+}
+
+.footer-right a {
+    font-size: .9rem;
+    color: #007BFF;
+    text-decoration: none;
+    margin-left: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
