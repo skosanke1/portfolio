@@ -12,6 +12,12 @@ h2 {
     color: #007bff;   
 }
 
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from its parent element */
+    cursor: pointer; /* Change cursor to pointer on hover (optional) */
+}
+
 ::selection {
     background: #FFDC00;
 }
@@ -312,4 +318,74 @@ footer {
 
 .footer-right a:hover {
     text-decoration: underline;
+}
+
+/* Mobile displays styles */
+@media screen and (max-width: 1024px) {
+    #background, #projects, #skills {
+        padding: 50px;
+        flex-direction: column;
+    }
+
+    #skills {
+        align-items: flex-start;
+    }
+
+    .content {
+        padding-top: 30px;
+        padding-left: 50px;
+    }
+
+    .title {
+        text-align: left;
+        margin-right: 50px;
+    }
+
+    footer {
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-description {
+        padding: 0px 25px;
+        width: 80%;
+    }
+
+    .project-details img {
+        padding: 0px 25px;
+        width: 80%;
+    }
+
+    .project-description h3 {
+        padding: 0px 25px;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #intro h1, .tagline {
+        font-size: 1.75rem;
+    }
+
+    #skills .content {
+        display: inline;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #background, #projects, #skills {
+        padding: 30px;
+    }
 }
