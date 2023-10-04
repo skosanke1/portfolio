@@ -1,3 +1,4 @@
+/* Default styles */
 body, h1,h2, p {
     color: #444452;
     margin: 0;
@@ -37,7 +38,6 @@ h2 {
     max-width: 1240px;
     margin: 0 auto;
     background-color: white;
-    
 }
 
 .tagline {
@@ -46,13 +46,14 @@ h2 {
     max-width: 700px;
     font-weight: 300;
 }
+
 .name {
     font-weight: 700;
 }
+
 .contact {
     font-size: 1.25rem;
     font-weight: 400;
-
 }
 
 #intro h1 {
@@ -62,13 +63,6 @@ h2 {
     align-items: center;
 }
 
-#intro .emoji img{
-    height: 40px;
-    width: 40px;
-    margin-left: 10px;
-}
-
-/* Hand wave animation */
 @keyframes waving-animation {
     0%, 100% {
         transform: rotate(0deg);
@@ -80,9 +74,16 @@ h2 {
     }
 }
 
+#intro .emoji img{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
+
 #intro .emoji:hover img {
     animation: waving-animation .4s 2;
 }
+
 #intro .emoji img::selection {
     background: transparent;
 }
@@ -92,6 +93,7 @@ h2 {
     width: 40px;
     margin-left: 10px;
 }
+
 #intro .technologist img::selection {
     background: transparent;
 }
@@ -99,8 +101,10 @@ h2 {
 #intro .point img{
     height: 30px;
     width: 30px;
+    transition: transform 0.3s ease-in-out;
     margin-left: 10px;
 }
+
 #intro .point img::selection {
     background: transparent;
 }
@@ -117,6 +121,167 @@ h2 {
     background-color: #007BFF;
     text-decoration: none;
     transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Background section styles */
+#background {
+    padding: 100px 170px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#background .title {
+    width: 200px;
+}
+
+.content {
+    max-width: 650px;
+    width: 100%;
+}
+
+/* Skills section styles */
+#skills {
+    padding: 100px 170px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#skills .title {
+    width: 200px;
+    padding-top: 20px;
+}
+
+#skills .content {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#skills .column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+#skills h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
+    margin-bottom: 5px;
+}
+
+/* Experience section styles */
+#experience {
+    padding: 100px 170px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+#experience .title {
+    width: 200px;
+    padding-top: 20px;
+}
+
+#experience .content {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-item {
+    max-width: 100%;
+    max-width: 650px;
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.experience-item p {
+    margin: 0;
+}
+
+/* Projects section styles */
+#projects {
+    padding: 100px 45px 100px  170px ;
+    display: flex;
+    align-items: flex-start;   
+    align-items: top;
+    justify-content: center;
+}
+
+.project {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    margin-left: -5%;
+}
+
+.project-details {
+    flex: 1;
+}
+
+.project-details img {
+    width: 100%;
+    max-width: 650px;
+    margin-right: 20px;
+}
+
+.project-description {
+    width: 125px;
+    flex-shrink: 0;
+    margin-left: 20px; 
+    margin-top: -25px;
+}
+
+.project-description h3 {
+    width: 125px;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.project-description p {
+    margin: 0;
+}
+
+@keyframes point-up-animation {
+    0% {
+    }
+    100% {
+        transform:  translateY(-6px);
+    }
+}
+
+/* Scroll button */
+#scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 16px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#scroll-to-top img {
+    height: 28px;
+    width: 28px;
+    display: block;
+}
+#scroll-to-top img:hover {
+    display: block;
+    animation: point-up-animation .4s forwards;
 }
 
 /* Footer section styles */
